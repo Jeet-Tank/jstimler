@@ -1,26 +1,32 @@
 @font-face {
     font-family: helvetica now regular;
     src: url(./assets/HelveticaNowDisplay-Regular.otf);
+    src: url(./assets/HelveticaNowDisplay-Regular.woff);
+    src: url(./assets/HelveticaNowDisplay-Regular.woff2);
 }
 @font-face {
     font-family: helvetica now medium;
     src: url(./assets/HelveticaNowDisplay-Medium.otf);
-}
-@font-face {
-    font-family: helvetica now hairline;
-    src: url(./assets/HelveticaNowDisplay-Hairline.otf);
+    src: url(./assets/HelveticaNowDisplay-Medium.woff);
+    src: url(./assets/HelveticaNowDisplay-Medium.woff2);
 }
 @font-face {
     font-family: helvetica now bold;
     src: url(./assets/HelveticaNowDisplay-Bold.otf);
+    src: url(./assets/HelveticaNowDisplay-Bold.woff);
+    src: url(./assets/HelveticaNowDisplay-Bold.woff2);
 }
 @font-face {
     font-family: helvetica now light;
     src: url(./assets/HelveticaNowDisplay-Light.otf);
+    src: url(./assets/HelveticaNowDisplay-Light.woff);
+    src: url(./assets/HelveticaNowDisplay-Light.woff2);
 }
 @font-face {
     font-family: helvetica now thin;
     src: url(./assets/HelveticaNowDisplay-Thin.otf);
+    src: url(./assets/HelveticaNowDisplay-Thin.woff);
+    src: url(./assets/HelveticaNowDisplay-Thin.woff2);
 }
 
 *{
