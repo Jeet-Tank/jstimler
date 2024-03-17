@@ -12,8 +12,8 @@
 }
 @font-face {
     font-family: helvetica now bold;
-    src: url(./assets/HelveticaNowDisplay-Bold.otf);
     src: url(./assets/HelveticaNowDisplay-Bold.woff);
+    src: url(./assets/HelveticaNowDisplay-Bold.otf);
     src: url(./assets/HelveticaNowDisplay-Bold.woff2);
 }
 @font-face {
@@ -262,6 +262,7 @@ nav{
     width: 110%;
     height: 564px;
     position: absolute;
+    z-index: 4;
     color: blue;
     border-style: solid ;
     border-width: 80px 0px ;
@@ -340,22 +341,23 @@ nav{
     position: relative;
 }
 #imgpage4hr{
-    height: 127%;
+    height: 117%;
     width: 100%;
     position: absolute;
     color: white;
+    top: -90px;
     border-style: solid;
-    border-width: 125px 0px;
+    border-width: 105px 0px;
 }
 #imgpage4{
     margin-top: 20px;
     width: 100%;
-    height: 110vh;
+    height: 107vh;
     overflow: hidden;
     position: relative;
 }
 #overlaypage4{
-    height: 109vh;
+    height: 107vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.629);
     position: absolute;
@@ -364,7 +366,7 @@ nav{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    padding: 10px 0px ;
+    padding: 10px 0px 70px 0;
 }
 #overlaypage4 button{
     width: 110px;
@@ -485,17 +487,16 @@ nav{
 #imgpage6{
     height: 100vh;
     width: 100%;
-    overflow: hidden;
     position: relative;
 }
 
 #imgpage6hr{
-    height: 138vh;
+    height: 140vh;
     width: 100%;
     color: white;
     position: absolute; 
     z-index: 4;
-    top: -120px;
+    top: -200px;
     border-style: solid;
     border-width: 140px 0;
 }
