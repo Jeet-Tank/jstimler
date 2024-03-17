@@ -7,15 +7,34 @@ function loco() {
 
 const locoScroll = new LocomotiveScroll({
   el: document.querySelector("#main"),
-  smooth: true,
-  lerp:0.03,
-
-  // for tablet smooth
-  tablet: { smooth: true },
-
-  // for mobile
-  smartphone: { smooth: true }
+      lerp:0.03,
+      smooth: true,
+      getDirection: true,
+      smoothMobile: true,
+  mobile: {
+      breakpoint: 0,
+      inertia: 0.2,
+      lerp:0.5,
+      smooth: true,
+      getDirection: true,
+  },
+  tablet: {
+      breakpoint: 0,
+      inertia: 0.2,
+      lerp:0.5,
+      smooth: true,
+      getDirection: true,
+      },
+  smartphone: {
+      breakpoint: 0,
+      inertia: 0.2,
+      lerp:0.5,
+      smooth: true,
+      getDirection: true,
+  }
 });
+new ResizeObserver(() => scroll.update()).observe(document.querySelector("#main"));
+
 locoScroll.on("scroll", ScrollTrigger.update);
 
 ScrollTrigger.scrollerProxy("#main", {
@@ -73,7 +92,7 @@ elemall.forEach(function(elem){
     });
     elem.addEventListener("mouseleave", function(){
         csr.style.scale = 1
-        csr.style.border = " 0.5px solid #757575;"
+        csr.style.border = ""
         csr.style.backgroundColor = "transparent"
     });
 })
@@ -98,17 +117,17 @@ about.addEventListener('mouseenter',function(){
 about.addEventListener('mouseleave',function(){
   document.getElementById("footerleft").style.backgroundImage = "url(./assets/img-footer-1154x1536.avif)";
   document.getElementById("footerleft").style.animation="fadeOut 0.4s";
-  document.getElementById("footerleft").style.backgroundSize="540px";
+  document.getElementById("footerleft").style.backgroundSize="cover";
 });
 sustain.addEventListener('mouseleave',function(){
   document.getElementById("footerleft").style.backgroundImage = "url(./assets/img-footer-1154x1536.avif)";
   document.getElementById("footerleft").style.animation="fadeOut 0.4s";
-  document.getElementById("footerleft").style.backgroundSize="540px";
+  document.getElementById("footerleft").style.backgroundSize="cover";
 });
 Fabrics.addEventListener('mouseleave',function(){
   document.getElementById("footerleft").style.backgroundImage = "url(./assets/img-footer-1154x1536.avif)";
   document.getElementById("footerleft").style.animation="fadeOut 0.4s";
-  document.getElementById("footerleft").style.backgroundSize="540px";
+  document.getElementById("footerleft").style.backgroundSize="cover";
 });
 
 
@@ -195,6 +214,28 @@ tl2.to("#text1>h3>span",{
     stagger:1,
 })
 
+gsap.from("#textpage3",{
+  opacity:0,
+  x:360,
+  scrollTrigger:{
+    trigger:"#textpage3",
+    scroller:"#main",
+    start:"top 100%",
+    end:"bottom 50%",
+    scrub:true,
+  }
+})
+gsap.from("#page6right",{
+  opacity:0,
+  y:60,
+  scrollTrigger:{
+    trigger:"#page6right",
+    scroller:"#main",
+    start:"top 100%",
+    end:"bottom 20%",
+    scrub:true,
+  }
+})
  
 var clutter3 ="";
 document.querySelector("#textOverlayPage4 p").textContent.split("").forEach(function (dets) {
@@ -222,7 +263,7 @@ gsap.from("#imgpage5righttop",{
   scrollTrigger:{
     trigger:"#imgpage5righttop",
     scroller:"#main",
-    start:"top 78%",
+    start:"-10% 78%",
     end:"top 30%",
     scrub:1,
   }
