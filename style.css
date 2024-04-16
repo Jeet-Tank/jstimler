@@ -1268,7 +1268,9 @@ nav {
     }
     #footerhr {
         height: 129%;
+        width: 101%;
         top: -7vh;
+        left: -0.5%;
         border-width: 8vh 0px;
     }
 
