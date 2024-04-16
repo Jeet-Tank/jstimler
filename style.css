@@ -1179,10 +1179,13 @@ nav {
         height: 15vw;
     }
     #page6{
-        height: 180vh;
+        height: 130vh;
+    }
+    #imgpage6{
+        height: 50vh;
     }
     #imgpage6hr {
-        height: 139vh;
+        height: 78vh;
         top: -14vh;
         border-width: 13vh 0;
     }
